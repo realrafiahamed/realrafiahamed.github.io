@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+}
+
+.profile {
+    display: flex;
+    justify-content: left;
+    align-items: center;  
+}
+
+.info {
+    text-align: left;
+}
+
+.profile img {
+    margin-right: 20px; 
+}
+
+nav {  
+    text-align: center;
+    margin: 10px;
+    padding: 5px 0;
+}
+
+nav a {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.future-goal{
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+tr:hover {
+    background-color: #cce5ff;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 12px;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section h2 {
+    animation: fadeInLeft 1s ease;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafi Ahamed's Personal Homepage</title>
+    <link rel="stylesheet" type="text/css" href="homestyle.css" />
+    <style>
+        .highlight {
+            color: darkblue;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <div class="profile">
+            <img src="Rafi.jpg" alt="My Photo" height = '330' width="250" />
+            <div class="info">
+                <h1>Rafi Ahamed</h1>
+                <p>Undergraduate CSE Student</p>
+                <p>BRAC University</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#personal">Personal Info</a> |
+        <a href="#about">About Me</a> |
+        <a href="#education">Education</a> |
+        <a href="#skills">Technical Skills</a> |
+        <a href="#links">Useful Links</a> |
+        <a href="hobbies.html">My Hobbies Page</a>
+    </nav>
+    <hr />
+
+    <section id="personal">
+        <h2>Personal Info</h2>
+        <p>Hello! My name is <strong>Rafi Ahamed</strong>. I am currently studying Computer Science at 
+            <a href="https://www.bracu.ac.bd" target="_blank">BRAC University</a>. One of my most favorite quotes is <span class="highlight">"Stay hungry, stay foolish." - Steve Jobs</span></p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a dedicated and curious undergraduate student in Computer Science at BRAC University. 
+            My interests lie in exploring the intersection of technology and data, particularly in web development and data analytics. 
+            I am always eager to learn new skills and take on challenges that push me to grow both technically and personally.
+            I am passionate about technology, data analytics, and web development. I enjoy solving problems and continuously improving my technical skills. 
+            Besides academics, I like watching movies, going to the gym, and learning about personal development.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Institution</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td>2022 - Present</td>
+                <td>BRAC University</td>
+                <td>
+                    Bachelor of Science in Computer Science.<br/>
+                    Interested in Data Analytics and Web Development. <br/>
+                    Currently learning Python, Java, and C programming languages.
+                </td>
+            </tr>
+
+            <tr>
+                <td>2019 - 2021</td>
+                <td>Kushtia Government College</td>
+                <td>
+                    Passed HSC in Science.
+                </td>
+            </tr>
+
+            <tr>
+                <td>2011 - 2019</td>
+                <td>Kushtia Zilla School</td>
+                <td>
+                    Passed SSC in Science
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="future-goal">Future Goal</td>
+                <td>
+                    To become a skilled software engineer and build impactful projects.
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Web Development: HTML & CSS, Basic JavaScript</li>
+            <li>Programming Language: Python, C, Java Programming</li>
+            <li>Frameworks: Laravel(Basic)</li>
+            <li>Problem Solving: <a href="https://codeforces.com/" target="_blank">Codeforces</a>, <a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
+        </ul>
+        
+        <h3>Top 5 Favorite Movies</h3>
+        <ol>
+            <li>Inception</li>
+            <li>Interstellar</li>
+            <li>The Dark Knight</li>
+            <li>3 Idiots</li>
+            <li>The Social Network</li>
+        </ol>
+    </section>
+
+    <section id="links">
+        <h2>Useful Links</h2>
+        <p>Join our course community on <a href="https://discord.com" target="_blank">CSE 391 Discord</a></p>
+        <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> to practice HTML and CSS.</p>
+        <p>Learn validation from the <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>.</p>
+    </section>
+
+    <section>
+        <h2>Inspiration</h2>
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbnN8ZW58MHx8fHwxNzcwOTgyMDU0fDA&ixlib=rb-4.1.0&fit=max&q=80"
+             alt="Mountain Image" width="300" />
+    </section>
+    <hr/>
+
+    <footer>
+        <p id="location"></p>
+        <p id="lastModified"></p>
+        <p>&copy; 2026 Rafi. All Rights Reserved.</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+
+    <script>
+        document.getElementById("location").innerHTML =
+            "Page location: " + window.location.href;
+        document.getElementById("lastModified").innerHTML =
+            "Last Modified: " + document.lastModified;
+    </script>
+</body>
+</html>
