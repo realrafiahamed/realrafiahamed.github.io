@@ -16,7 +16,7 @@ header {
 
 .profile {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;  
 }
 
@@ -73,6 +73,10 @@ tr:hover {
     background-color: #cce5ff;
 }
 
+.back-to-home {
+    text-align: center; 
+}
+
 @media screen and (max-width: 600px) {
     table {
         font-size: 12px;
@@ -87,19 +91,4 @@ footer {
     text-align: center;
     background-color: white;
     padding: 10px;
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-section h2 {
-    animation: fadeInLeft 1s ease;
 }
