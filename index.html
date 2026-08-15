@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rafi Ahamed - Portfolio" />
+    <title>Rafi Ahamed - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-loading">
+    <!-- Signature Loader -->
+    <div class="site-loader" aria-hidden="true">
+      <svg class="site-loader__signature" viewBox="0 0 510 190" role="presentation">
+        <text x="28" y="142">Rafi</text>
+      </svg>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav" id="top-nav">
+      <div class="top-nav__inner">
+        <!-- Redesigned Logo -->
+        <a class="brand-logo" href="#about" aria-label="Rafi Homepage">
+          <span class="logo-text">Rafi</span><span class="logo-dot">.</span>
+        </a>
+        
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about" class="nav-item active" data-tab="about">About ME</a>
+          <a href="D:\portfolio\rafi.pdf" target="_blank" rel="noopener noreferrer" download class="nav-item nav-item--download">
+            <span>Resume / CV</span>
+            <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.62 2.48A2 2 0 0 0 4.56 21h14.88a2 2 0 0 0 1.94-1.52L22 17" />
+            </svg>
+          </a>
+          <a href="#education" class="nav-item" data-tab="education">Education</a>
+          <a href="#projects" class="nav-item" data-tab="projects">Projects & Thesis</a>
+          <a href="#honors" class="nav-item" data-tab="honors">Achievements</a>
+          <a href="#reference" class="nav-item" data-tab="reference">Reference</a>
+          <a href="#contact" class="nav-item" data-tab="contact">Contact Me</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+            <span class="toggle-track">
+              <span class="toggle-thumb">
+                <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              </span>
+            </span>
+          </button>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Collapsible Dropdown Menu -->
+      <nav class="mobile-menu" id="mobile-menu">
+        <a href="#about" data-tab="about">About Me</a>
+        <a href="assets/rafi.pdf" target="_blank" rel="noopener noreferrer" download>Resume / CV</a>
+        <a href="#education" data-tab="education">Education</a>
+        <a href="#projects" data-tab="projects">UG Projects & Thesis</a>
+        <a href="#honors" data-tab="honors">Honors / Achievements</a>
+        <a href="#reference" data-tab="reference">Reference</a>
+        <a href="#contact" data-tab="contact">Contact Me</a>
+      </nav>
+    </header>
+
+    <!-- Main Shell: GitHub Profile Layout -->
+    <div class="site-shell">
+      <div class="layout-container">
+        <!-- GitHub Style Left Sidebar -->
+        <aside class="profile-sidebar" aria-label="Profile information">
+          <div class="avatar-wrap">
+            <img class="avatar" src="assets/rafi.jpg" alt="A portrait of Rafi" />
+            <span class="online-dot" aria-label="Available for hire"></span>
+          </div>
+
+          <!-- Name Centered Below Photo -->
+          <div class="profile-names">
+            <h1 id="page-title">
+              Rafi Ahamed
+              <span class="verified" title="Verified profile" aria-label="Verified profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 2.4 2.1 1.45 2.55-.13 1.35 2.17 2.2 1.3-.15 2.55L21.6 12l-1.45 2.1.13 2.55-2.17 1.35-1.3 2.2-2.55-.15L12 21.6l-2.1-1.45-2.55.13L6 18.1l-2.2-1.3.15-2.55L2.4 12l1.45-2.1-.13-2.55L6 6l1.3-2.2 2.55.15L12 2.4Z" />
+                  <path class="check" d="m8.55 12.08 2.15 2.15 4.75-4.75" />
+                </svg>
+              </span>
+            </h1>
+            
+            <!-- Single Line Role -->
+            <p class="role">Undergrad Student | Computer Science | BRAC University</p>
+          </div>
+
+          <!-- Concise 2-Line Intro -->
+          <p class="bio">
+            Building intelligent software systems & crafting intuitive digital interfaces. Passionate about HCI, Web Engineering, and UI/UX design.
+          </p>
+
+          <div class="meta-info">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <span>Currently based in <strong>Dhaka, Bangladesh</strong>
+              <svg class="flag-icon" viewBox="0 0 640 480" width="27" height="20" aria-label="Bangladesh Flag">
+                <rect width="640" height="480" fill="#006a4e"/>
+                <circle cx="280" cy="240" r="160" fill="#f42a41"/>
+              </svg>
+            </span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="actions">
+            <a class="resume-button" href="#resume" data-tab="resume">View Resume  
+              <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.62 2.48A2 2 0 0 0 4.56 21h14.88a2 2 0 0 0 1.94-1.52L22 17" />
+              </svg>
+            </a>
+            <div class="icon-group">
+              <a class="icon-button" href="mailto:hello@rafi.design" aria-label="Send an email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7" /></svg>
+              </a>
+              <a class="icon-button" href="https://github.com" target="_blank" rel="noreferrer" aria-label="Open GitHub profile">
+                <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 8.9 21.3c.49.09.67-.21.67-.47v-1.82c-2.76.6-3.34-1.17-3.34-1.17-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.32 1.08 2.89.83.09-.64.35-1.08.63-1.33-2.2-.25-4.52-1.1-4.52-4.9 0-1.08.38-1.96 1.02-2.65-.1-.25-.44-1.26.1-2.63 0 0 .83-.27 2.7 1.01a9.4 9.4 0 0 1 4.92 0c1.88-1.28 2.7-1.01 2.7-1.01.54 1.37.2 2.38.1 2.63.63.69 1.02 1.57 1.02 2.65 0 3.81-2.32 4.65-4.53 4.9.36.31.67.9.67 1.81v2.69c0 .26.18.57.68.47A9.8 9.8 0 0 0 12 2.2Z" /></svg>
+              </a>
+              <a class="icon-button" href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="Open LinkedIn profile">
+                <svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45H16.9v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.35 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.57V9h3.56v11.45Z" /></svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Area: Scroll-Snap Sections -->
+        <main class="main-content">
+          <!-- About Section -->
+          <section id="about" class="content-section tab-active">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">about-me / Rafi_Ahamed </span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>👋 Hi, I'm Rafi Ahamed</h3>
+                <p>I am a Computer Science undergraduate student at <strong>BRAC University</strong>, passionate about bridging the gap between computer science fundamentals and modern digital design. My focus revolves around human-computer interaction, front-end architecture, and design systems.</p>
+                <p>Whether engineering performant web applications or prototyping mobile interface flows in Framer and Figma, I prioritize computational efficiency, high-fidelity visuals, and thoughtful interactive details.</p>
+                <div class="readme-highlights">
+                  <div><strong>🎓 Focus:</strong> HCI, Web Development, Software Engineering</div>
+                  <div><strong>🛠️ Tools:</strong> React, JavaScript/TypeScript, Python, Framer, Figma</div>
+                  <div><strong>📍 Location:</strong> Dhaka, Bangladesh</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Education Section -->
+          <section id="education" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">education / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>🎓 Academic Background</h3>
+                <p><strong>BRAC University</strong> — Bachelor of Science in Computer Science & Engineering</p>
+                <p>Focusing on software methodology, web architecture, and design systems.</p>
+                <div class="readme-highlights">
+                  <div><strong>📚 Relevant Coursework:</strong> Data Structures, Algorithms, HCI, Web Engineering, Software Engineering, Database Systems</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">projects / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>🚀 UG Projects & Thesis</h3>
+                <p>A selection of academic and open-source initiatives:</p>
+                <div class="readme-highlights">
+                  <div><strong>💻 Interactive Portfolio Architecture:</strong> High-performance SPA with custom theme transitions.</div>
+                  <div><strong>🔬 HCI Design Research:</strong> Interface flow prototypes in Framer & Figma for high-accessibility software.</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Honors Section -->
+          <section id="honors" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">honors / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>🏆 Honors & Achievements</h3>
+                <p>Recognitions, academic accomplishments, and active roles:</p>
+                <div class="readme-highlights">
+                  <div><strong>🌟 Academic Highlights:</strong> Consistent coursework excellence at BRAC University.</div>
+                  <div><strong>🎯 Design Systems:</strong> Custom visual & interface components built for web apps.</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Reference Section -->
+          <section id="reference" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">references / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>📌 Academic & Professional References</h3>
+                <p>References are available upon formal request for academic or software engineering opportunities.</p>
+                <div class="readme-highlights">
+                  <div><strong>📧 Direct Contact:</strong> hello@rafi.design</div>
+                  <div><strong>💼 Connect:</strong> Reach out via LinkedIn or Email on the sidebar.</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">contact / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>📬 Contact Me</h3>
+                <p>Feel free to reach out for collaborations, inquiries, or academic discussions.</p>
+                <div class="readme-highlights">
+                  <div><strong>📧 Email:</strong> hello@rafi.design</div>
+                  <div><strong>💼 LinkedIn:</strong> linkedin.com</div>
+                  <div><strong>📍 Location:</strong> Dhaka, Bangladesh</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+          <footer class="site-footer">
+            <div class="footer-inner">
+              <p class="footer-copy">
+                © Copyright 2026. Personal Portfolio Website of <strong> Rafi Ahamed</strong>.
+              </p>
+              <p class="footer-note">
+                All rights reserved.
+                Designed & Developed by <strong>Rafi Ahamed</strong>.
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div> <!-- closes .layout-container -->
+    </div> <!-- closes .site-shell -->
+    <script src="script.js"></script>
+  </body>
+</html>
