@@ -2,7 +2,7 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
-loaderDuration = 3000;
+loaderDuration = 3230;
 
 function applyTheme(theme) {
   const isLight = theme === 'light';
