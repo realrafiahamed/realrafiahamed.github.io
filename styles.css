@@ -854,7 +854,7 @@ body.light .readme-highlights {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   html, body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -949,13 +949,8 @@ body.light .readme-highlights {
   }
 
   .site-loader__signature text {
-    animation: loader-sign 2.95s cubic-bezier(.63, 0, .35, 1) 0.08s forwards;  /* much faster */
-    stroke-width: 2.4;         
-    font-size: 260px;
     stroke: #ffffff;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
-    stroke-dasharray: 2800;
-    stroke-dashoffset: 2800;
   }
 
   .site-shell {
