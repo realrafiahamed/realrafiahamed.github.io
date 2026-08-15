@@ -2,6 +2,8 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
+const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+const loaderDuration = isMobile ? 3200 : 2585;   // longer on mobile so signature finishes
 const loaderDuration = 2585;
 
 function applyTheme(theme) {
