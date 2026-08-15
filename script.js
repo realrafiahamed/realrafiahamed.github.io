@@ -3,8 +3,7 @@ const themeToggle = document.querySelector('.theme-toggle');
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-const loaderDuration = isMobile ? 3200 : 2585;   // longer on mobile so signature finishes
-const loaderDuration = 2585;
+const loaderDuration = isMobile ? 2585 : 2585;   // longer on mobile so signature finishes
 
 function applyTheme(theme) {
   const isLight = theme === 'light';
@@ -166,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isMobile) {
       window.scrollTo(0, 0);
-      activateSection(initialRoute, false);
+      activateSection({ top: 0, behavior: 'auto' });
     } else {
       setTimeout(() => {
         initialSec.scrollIntoView({ behavior: 'auto', block: 'start' });
