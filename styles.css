@@ -67,7 +67,11 @@ body.is-loading { overflow: hidden; }
 body.is-loading .site-shell { opacity: 0; visibility: hidden; pointer-events: none; }
 body.is-loading .site-loader { opacity: 1; visibility: visible; }
 
-.site-loader__signature { width: min(72vw, 510px); overflow: visible; }
+.site-loader__signature { 
+  width: min(72vw, 510px); 
+  overflow: visible; 
+}
+
 .site-loader__signature text {
   fill: transparent;
   stroke: currentColor;
@@ -76,6 +80,7 @@ body.is-loading .site-loader { opacity: 1; visibility: visible; }
   font-size: 285px;
   stroke-dasharray: 3500;
   stroke-dashoffset: 3500;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
   animation: loader-sign 2.95s cubic-bezier(.63, 0, .35, 1) .08s forwards;
 }
 
@@ -942,15 +947,6 @@ body.light .readme-highlights {
   .mobile-menu a:hover {
     background: var(--button);
     color: var(--text);
-  }
-
-  .site-loader__signature {
-    width: min(85vw, 420px);
-  }
-
-  .site-loader__signature text {
-    stroke: #ffffff;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
   }
 
   .site-shell {
