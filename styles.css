@@ -954,6 +954,8 @@ body.light .readme-highlights {
     font-size: 260px;
     stroke: #ffffff;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+    stroke-dasharray: 2800;
+    stroke-dashoffset: 2800;
   }
 
   .site-shell {
