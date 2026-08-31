@@ -82,11 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!targetSection) return;
 
     sections.forEach(sec => {
-      if (sec === targetSection) {
-        sec.classList.add('tab-active');
-      } else {
-        sec.classList.remove('tab-active');
-      }
+      sec.classList.toggle('tab-active', sec === targetSection);
     });
 
     triggers.forEach(link => {
@@ -123,36 +119,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== Improved Observer (works on all devices) =====
+  // ===== Section Observer (Scroll Sync) =====
   function createObserver() {
-  const mainContent = document.querySelector('.main-content');
-  const isDesktop = window.matchMedia('(min-width: 1025px)').matches;
+    const mainContent = document.querySelector('.main-content');
+    const isDesktop = window.matchMedia('(min-width: 1025px)').matches;
 
-  const observer = new IntersectionObserver((entries) => {
-    // Only consider entries that are significantly visible
-    const visibleEntries = entries
-      .filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.35)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const observer = new IntersectionObserver((entries) => {
+      const visibleEntries = entries
+        .filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.25)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-    if (visibleEntries.length > 0) {
-      // Pick the most visible section
-      activateSection(visibleEntries[0].target.id, true);
-    }
-  }, {
-    root: isDesktop ? mainContent : null,
-    threshold: [0.2, 0.35, 0.5, 0.65],
-    rootMargin: isDesktop 
-      ? '-10% 0px -10% 0px' 
-      : '-20% 0px -35% 0px'   // stricter on mobile → less flickering
+      if (visibleEntries.length > 0) {
+        // Pass false so scrolling doesn't break browser history
+        activateSection(visibleEntries[0].target.id, false);
+      }
+    }, {
+      root: isDesktop ? mainContent : null,
+      threshold: [0.2, 0.35, 0.5],
+      rootMargin: isDesktop ? '-10% 0px -10% 0px' : '-10% 0px -20% 0px'
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+    return observer;
+  }
+
+  // ===== Card Animation Observer (Mobile Scroll Fix) =====
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.project-card, .project-entry, .focus-card').forEach(card => {
+    cardObserver.observe(card);
   });
-
-  sections.forEach(sec => observer.observe(sec));
-  return observer;
-}
 
   let currentObserver = createObserver();
 
-  // Recreate observer on resize so it works correctly when switching between mobile/desktop
   window.addEventListener('resize', () => {
     if (currentObserver) currentObserver.disconnect();
     currentObserver = createObserver();
@@ -169,17 +174,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initial load
-  // Initial load
+  // Initial load fix
   const initialRoute = getRouteName();
   const initialSec = document.getElementById(initialRoute);
 
   if (initialSec) {
     const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-
     if (isMobile) {
       window.scrollTo(0, 0);
-      activateSection({ top: 0, behavior: 'auto' });
+      activateSection(initialRoute, false);
     } else {
       setTimeout(() => {
         initialSec.scrollIntoView({ behavior: 'auto', block: 'start' });
