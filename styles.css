@@ -47,6 +47,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 160;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+}
+
+.scroll-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b, #f7b733);
+  box-shadow: 0 0 12px rgba(255, 75, 43, 0.7);
+  transition: width 0.1s linear;
+}
+
 a { color: inherit; text-decoration: none; }
 
 /* Loader */
@@ -640,6 +659,306 @@ body.light .readme-highlights {
   background: rgba(0, 0, 0, 0.02);
 }
 
+/* Enriched README panels: retain the GitHub-inspired shell while giving the
+   project, focus, and contact sections their own visual hierarchy. */
+.section-intro {
+  margin-bottom: 16px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  opacity: .7;
+}
+
+.section-intro h3,
+.contact-hero h3 {
+  margin-bottom: 7px;
+  font-size: clamp(24px, 2.1vw, 31px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: minmax(250px, .92fr) minmax(0, 1.35fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.project-entry {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 185px;
+  padding: 17px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--card-bg) 74%, var(--background));
+  transition: transform .28s cubic-bezier(.16, 1, .3, 1), border-color .28s ease, box-shadow .28s ease;
+}
+
+.project-entry:hover,
+.focus-card:hover,
+.contact-channel:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 68%, var(--border));
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--shadow) 72%, transparent);
+}
+
+.project-entry--thesis {
+  min-height: 382px;
+  color: #f0f6fc;
+  border-color: rgba(101, 153, 255, .42);
+  background:
+    radial-gradient(circle at 91% 0%, rgba(47, 129, 247, .29), transparent 39%),
+    linear-gradient(145deg, #161b34 0%, #151b2a 49%, #111723 100%);
+}
+
+.project-entry--thesis::after {
+  content: "";
+  position: absolute;
+  right: -62px;
+  bottom: -72px;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(149, 187, 255, .22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(149, 187, 255, .035), 0 0 0 56px rgba(149, 187, 255, .025);
+}
+
+.project-entry__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-index,
+.project-status {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.project-status {
+  padding: 4px 7px;
+  color: #8ec7ff;
+  border: 1px solid rgba(142, 199, 255, .25);
+  border-radius: 999px;
+  background: rgba(74, 137, 220, .12);
+}
+
+.project-entry h4,
+.focus-card h4 {
+  margin: 13px 0 7px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.14;
+  letter-spacing: -.025em;
+}
+
+.project-entry--thesis h4 {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  color: #fff;
+  font-size: clamp(23px, 2.05vw, 31px);
+  line-height: .98;
+  letter-spacing: -.05em;
+}
+
+.project-entry p,
+.focus-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.project-entry--thesis p { position: relative; z-index: 1; color: #c4ccda; }
+
+.project-proof {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 18px;
+  margin-top: 17px;
+  color: #b9c5d9;
+  font-size: 10px;
+}
+
+.project-proof span { display: flex; flex-direction: column; gap: 2px; }
+.project-proof strong { color: #fff; font-size: 18px; letter-spacing: -.04em; }
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.project-tags span {
+  padding: 4px 7px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(255,255,255,.025);
+  font: 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.project-entry--thesis .project-tags span { color: #dbe8ff; border-color: rgba(190, 211, 255, .2); background: rgba(190, 211, 255, .08); }
+
+.project-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: max-content;
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.project-link span { font-size: 15px; transition: transform .2s ease; }
+.project-link:hover span { transform: translate(2px, -2px); }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-grid .project-entry { min-height: 185px; }
+.project-entry--compact { justify-content: center; min-height: 0 !important; background: color-mix(in srgb, var(--accent) 6%, var(--card-bg)); }
+.project-entry--compact .project-index { margin-bottom: 10px; color: var(--accent); }
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.focus-card {
+  min-height: 155px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--card-bg) 86%, var(--background));
+  transition: transform .28s cubic-bezier(.16, 1, .3, 1), border-color .28s ease, box-shadow .28s ease;
+}
+
+.focus-card > span {
+  color: var(--accent);
+  font: 700 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.skill-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.skill-board > div { padding: 12px; background: var(--card-bg); }
+.skill-board span { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.skill-board p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+
+.contact-hero {
+  position: relative;
+  padding: 21px 22px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-radius: 10px;
+  background: linear-gradient(110deg, color-mix(in srgb, var(--accent) 20%, var(--card-bg)), var(--card-bg) 62%);
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  right: -42px;
+  top: -70px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 24%, transparent), transparent 69%);
+}
+
+.contact-hero h3,
+.contact-hero p,
+.contact-hero .section-eyebrow { position: relative; z-index: 1; }
+.contact-hero p { max-width: 570px; margin: 0; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.contact-channel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 76px;
+  padding: 13px 37px 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--card-bg) 84%, var(--background));
+  transition: transform .28s cubic-bezier(.16, 1, .3, 1), border-color .28s ease, box-shadow .28s ease;
+}
+
+.contact-channel--primary { border-color: color-mix(in srgb, var(--accent) 62%, var(--border)); }
+.contact-channel span { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.contact-channel strong { overflow: hidden; color: var(--text); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.contact-channel i { position: absolute; top: 50%; right: 14px; color: var(--accent); font-size: 17px; font-style: normal; transform: translateY(-50%); }
+.contact-location { margin: 13px 0 0 !important; color: var(--muted); font-size: 11px !important; text-align: center; }
+
+#projects .about-readme-body,
+#honors .about-readme-body,
+#contact .about-readme-body {
+  justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+  .project-showcase { grid-template-columns: 1fr; }
+  .project-entry--thesis { min-height: 305px; }
+  .focus-grid, .skill-board { grid-template-columns: 1fr; }
+  .focus-card { min-height: 0; }
+}
+
+@media (max-width: 560px) {
+  .project-grid, .contact-grid { grid-template-columns: 1fr; }
+  .project-entry--thesis h4 { font-size: 26px; }
+  .project-proof { gap: 12px; }
+  .contact-channel { min-height: 68px; }
+}
+
 .repo-meta {
   display: flex;
   align-items: center;
@@ -682,6 +1001,213 @@ body.light .readme-highlights {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+#education {
+  height: 101% !important;
+  min-height: 0 !important;
+  max-height: 101% !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+}
+
+#education .repo-card {
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+}
+
+#education .about-readme-body {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  padding-top: 4px !important;
+  padding-bottom: 8px !important;
+}
+
+#education .about-readme-body h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+#education .education-timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 32px;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+#education .education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 9px;
+  bottom: 9px;
+  width: 2px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+#education .education-item {
+  position: relative;
+  margin: 0 0 20px 0;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+#education .education-item:last-child {
+  margin-bottom: 0;
+}
+
+#education .education-dot {
+  position: absolute;
+  left: -32px;
+  top: 23px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-color, #0d1117);
+  background: currentColor;
+  box-shadow: 0 0 0 1px currentColor;
+  z-index: 2;
+}
+
+#education .education-card {
+  width: 98%;
+  padding: 19px 22px;
+  box-sizing: border-box;
+  border: 1px solid rgba(127, 127, 127, 0.23);
+  border-radius: 9px;
+  background: rgba(127, 127, 127, 0.035);
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#education .education-card:hover {
+  transform: translateX(5px);
+  border-color: currentColor;
+  background: rgba(127, 127, 127, 0.07);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+}
+
+#education .education-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+#education .education-level {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  opacity: 0.55;
+}
+
+#education .education-card h4 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.3;
+  font-weight: 650;
+}
+
+#education .education-result {
+  flex-shrink: 0;
+  width: auto;
+  min-width: 165px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 7px;
+}
+
+#education .education-result .result-label {
+  display: inline;
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+#education .education-result strong {
+  display: inline;
+  font-size: 1.22rem;
+  line-height: 1;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+#education .education-result small {
+  display: inline;
+  font-size: 0.76rem;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0.55;
+}
+
+#education .education-institution {
+  margin: 10px 0 4px 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+#education .education-department {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+#education .education-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(127, 127, 127, 0.12);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  opacity: 0.75;
+}
+
+#education .expected-badge {
+  padding: 3px 8px;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  font-size: 0.60rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+#education .repo-meta {
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: hidden !important;
 }
 
 /* Mobile Controls */
@@ -1053,4 +1579,121 @@ body.light .readme-highlights {
 body.light .content-section.tab-active .repo-card {
   border-color: #2563eb;
   box-shadow: 0 0 0 0.5px rgba(37, 99, 235, 0.35);
+}
+
+/* Mobile/tablet education section only */
+  #education {
+    min-height: 680px !important;
+    height: auto !important;
+    min-height: 680px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #education .repo-card {
+    height: auto !important;
+    min-height: 670px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #education .about-readme-body {
+    height: auto !important;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    overflow: visible !important;
+  }
+
+  /* Timeline */
+  #education .education-timeline {
+    padding-left: 23px;
+  }
+
+  #education .education-timeline::before {
+    left: 5px;
+  }
+
+  /* Timeline dot */
+  #education .education-dot {
+    left: -23px;
+    top: 23px;
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Space between cards */
+  #education .education-item {
+    margin-bottom: 16px;
+  }
+
+  #education .education-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Card height */
+  #education .education-card {
+    padding: 15px 13px;
+  }
+
+  #education .education-card-top {
+    gap: 10px;
+  }
+
+  /* Title */
+  #education .education-card h4 {
+    font-size: 0.86rem;
+    line-height: 1.3;
+  }
+
+  /* GPA / CGPA */
+  #education .education-result {
+    min-width: 88px;
+    padding: 6px 7px;
+  }
+
+  #education .education-result .result-label {
+    font-size: 0.58rem;
+  }
+
+  #education .education-result strong {
+    font-size: 0.88rem;
+  }
+
+  #education .education-result small {
+    font-size: 0.62rem;
+  }
+
+  /* Institution */
+  #education .education-institution {
+    margin-top: 9px;
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  /* Department */
+  #education .education-department {
+    font-size: 0.64rem;
+    line-height: 1.25;
+  }
+
+  /* Date */
+  #education .education-footer {
+    margin-top: 9px;
+    padding-top: 7px;
+    font-size: 0.59rem;
+  }
+
+  #education .expected-badge {
+    padding: 3px 7px;
+    font-size: 0.52rem;
+  }
+
+@media (min-width: 1025px) {
+  #education,
+  #education .repo-card {
+    height: 101% !important;
+    min-height: 101% !important;
+    max-height: 101% !important;
+    box-sizing: border-box !important;
+  }
 }

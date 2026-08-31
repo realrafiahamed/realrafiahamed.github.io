@@ -2,7 +2,14 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
-const loaderDuration = 3130;
+const loaderDuration = 3100;
+const progressIndicator = document.querySelector('.scroll-progress span');
+
+function updateScrollProgress(scroller) {
+  if (!progressIndicator || !scroller) return;
+  const maxScroll = scroller.scrollHeight - scroller.clientHeight;
+  progressIndicator.style.width = `${maxScroll > 0 ? (scroller.scrollTop / maxScroll) * 100 : 0}%`;
+}
 
 function applyTheme(theme) {
   const isLight = theme === 'light';
@@ -53,6 +60,12 @@ window.setTimeout(() => {
 document.addEventListener('DOMContentLoaded', () => {
   const triggers = document.querySelectorAll('[data-tab]');
   const sections = document.querySelectorAll('.content-section');
+  const mainContent = document.querySelector('.main-content');
+  const scrollRoot = window.matchMedia('(min-width: 1025px)').matches && mainContent ? mainContent : document.documentElement;
+  const progressEventTarget = scrollRoot === document.documentElement ? window : scrollRoot;
+
+  progressEventTarget.addEventListener('scroll', () => updateScrollProgress(scrollRoot), { passive: true });
+  updateScrollProgress(scrollRoot);
 
   function getRouteName() {
     const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
@@ -143,6 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     if (currentObserver) currentObserver.disconnect();
     currentObserver = createObserver();
+    const nextScrollRoot = window.matchMedia('(min-width: 1025px)').matches && mainContent ? mainContent : document.documentElement;
+    updateScrollProgress(nextScrollRoot);
   });
 
   window.addEventListener('popstate', (e) => {
