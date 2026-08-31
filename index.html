@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rafi Ahamed - Portfolio" />
+    <title>Rafi Ahamed - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-loading">
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <!-- Signature Loader -->
+    <div class="site-loader" aria-hidden="true">
+      <svg class="site-loader__signature" viewBox="0 0 510 190" role="presentation">
+        <text x="28" y="142">Rafi</text>
+      </svg>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav" id="top-nav">
+      <div class="top-nav__inner">
+        <!-- Redesigned Logo -->
+        <a class="brand-logo" href="#about" aria-label="Rafi Homepage">
+          <span class="logo-text">Rafi</span><span class="logo-dot">.</span>
+        </a>
+        
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about" class="nav-item active" data-tab="about">About Me</a>
+          <a href="CV_Rafi_Ahamed_2026.pdf" target="_blank" rel="noopener noreferrer" download class="nav-item nav-item--download">
+            <span>Resume / CV</span>
+            <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.62 2.48A2 2 0 0 0 4.56 21h14.88a2 2 0 0 0 1.94-1.52L22 17" />
+            </svg>
+          </a>
+          <a href="#education" class="nav-item" data-tab="education">Education</a>
+          <a href="#projects" class="nav-item" data-tab="projects">Projects & Thesis</a>
+          <a href="#honors" class="nav-item" data-tab="honors">Technical Focus</a>
+          <a href="#contact" class="nav-item" data-tab="contact">Contact Me</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+            <span class="toggle-track">
+              <span class="toggle-thumb">
+                <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              </span>
+            </span>
+          </button>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Collapsible Dropdown Menu -->
+      <nav class="mobile-menu" id="mobile-menu">
+        <a href="#about" data-tab="about">About Me</a>
+        <a href="CV_Rafi_Ahamed_2026.pdf" target="_blank" rel="noopener noreferrer" download>Resume / CV</a>
+        <a href="#education" data-tab="education">Education</a>
+        <a href="#projects" data-tab="projects">Projects & Thesis</a>
+        <a href="#honors" data-tab="honors">Technical Focus</a>
+        <a href="#contact" data-tab="contact">Contact Me</a>
+      </nav>
+    </header>
+
+    <!-- Main Shell: GitHub Profile Layout -->
+    <div class="site-shell">
+      <div class="layout-container">
+        <!-- GitHub Style Left Sidebar -->
+        <aside class="profile-sidebar" aria-label="Profile information">
+          <div class="avatar-wrap">
+            <img class="avatar" src="rafi.jpg" alt="A portrait of Rafi" />
+            <span class="online-dot" aria-label="Available for hire"></span>
+          </div>
+
+          <!-- Name Centered Below Photo -->
+          <div class="profile-names">
+            <h1 id="page-title">
+              Rafi Ahamed
+              <span class="verified" title="Verified profile" aria-label="Verified profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 2.4 2.1 1.45 2.55-.13 1.35 2.17 2.2 1.3-.15 2.55L21.6 12l-1.45 2.1.13 2.55-2.17 1.35-1.3 2.2-2.55-.15L12 21.6l-2.1-1.45-2.55.13L6 18.1l-2.2-1.3.15-2.55L2.4 12l1.45-2.1-.13-2.55L6 6l1.3-2.2 2.55.15L12 2.4Z" />
+                  <path class="check" d="m8.55 12.08 2.15 2.15 4.75-4.75" />
+                </svg>
+              </span>
+            </h1>
+            
+            <!-- Single Line Role -->
+            <p class="role">Computer Science Graduate &amp; Software Engineer | BRAC University</p>
+          </div>
+
+          <!-- Concise 2-Line Intro -->
+          <p class="bio">
+           Systems-minded engineer building thoughtful full-stack products and intelligent software with a strong foundation in CS, systems engineering, and AI/ML.
+          </p>
+
+          <div class="meta-info">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <span>Currently based in <strong>Dhaka, Bangladesh</strong>
+              <svg class="flag-icon" viewBox="0 0 640 480" width="27" height="20" aria-label="Bangladesh Flag">
+                <rect width="640" height="480" fill="#006a4e"/>
+                <circle cx="280" cy="240" r="160" fill="#f42a41"/>
+              </svg>
+            </span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="actions">
+            <a class="resume-button" href="CV_Rafi_Ahamed_2026.pdf"
+            target="_blank" rel="noopener noreferrer" 
+            data-tab="resume">View Resume  
+              <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.62 2.48A2 2 0 0 0 4.56 21h14.88a2 2 0 0 0 1.94-1.52L22 17" />
+              </svg>
+            </a>
+            <div class="icon-group">
+              <a class="icon-button" href="mailto:rafiahamed2021@gmail.com" aria-label="Send an email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7" /></svg>
+              </a>
+              <a class="icon-button" href="https://github.com/realrafiahamed" target="_blank" rel="noreferrer" aria-label="Open GitHub profile">
+                <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 8.9 21.3c.49.09.67-.21.67-.47v-1.82c-2.76.6-3.34-1.17-3.34-1.17-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.32 1.08 2.89.83.09-.64.35-1.08.63-1.33-2.2-.25-4.52-1.1-4.52-4.9 0-1.08.38-1.96 1.02-2.65-.1-.25-.44-1.26.1-2.63 0 0 .83-.27 2.7 1.01a9.4 9.4 0 0 1 4.92 0c1.88-1.28 2.7-1.01 2.7-1.01.54 1.37.2 2.38.1 2.63.63.69 1.02 1.57 1.02 2.65 0 3.81-2.32 4.65-4.53 4.9.36.31.67.9.67 1.81v2.69c0 .26.18.57.68.47A9.8 9.8 0 0 0 12 2.2Z" /></svg>
+              </a>
+              <a class="icon-button" href="https://linkedin.com/in/rafiahamed" target="_blank" rel="noreferrer" aria-label="Open LinkedIn profile">
+                <svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45H16.9v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.35 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.57V9h3.56v11.45Z" /></svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Area: Scroll-Snap Sections -->
+        <main class="main-content">
+          <!-- About Section -->
+          <section id="about" class="content-section tab-active">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">about-me / Rafi_Ahamed </span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <h3>👋 Hi, I'm Rafi Ahamed</h3>
+                <p>I am a Computer Science graduate from <strong>BRAC University</strong>, graduating in 2026 with a 3.54 CGPA. My work sits at the intersection of software engineering, systems thinking, and AI/ML — from reliable web platforms to research in Bangla NLP.</p>
+                <p>I enjoy understanding technology beyond the surface and turning complex requirements into useful, dependable solutions. I bring analytical rigor, practical implementation skills, and care for the details that make software feel complete.</p>
+                 <div class="readme-highlights">
+                  <div><strong>💻 Languages &amp; Frameworks:</strong> Python, C, C++, JavaScript, PHP, Laravel, PyTorch, Scikit-learn</div>
+                  <div><strong>🗄️ Database &amp; Tools:</strong> MySQL, Git, Cisco Packet Tracer</div>
+                  <div><strong>⚙️ Engineering:</strong> Full-stack web architecture, systems simulation, compiler and process-management fundamentals</div>
+                  <div><strong>🤖 AI / ML:</strong> Machine learning, transformer evaluation, and Bangla NLP</div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Markdown</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>TypeScript</span>
+                <span>★ Pinned Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Education Section -->
+          <section id="education" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                  <path d="M6 6h10M6 10h10"/>
+                </svg>
+                <span class="repo-name">education / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+
+              <div class="about-readme-body">
+
+                <div class="education-timeline">
+
+                  <!-- BSc -->
+                  <div class="education-item">
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+                      <div class="education-card-top">
+                        <div>
+                          <span class="education-level">UNDERGRADUATE</span>
+                          <h4>Bachelor of Science (BSc) in Computer Science</h4>
+                        </div>
+
+                        <div class="education-result">
+                          <span class="result-label">CGPA</span>
+                          <strong>3.54</strong>
+                          <small>/ 4.00</small>
+                        </div>
+                      </div>
+
+                      <p class="education-institution">
+                        <strong>BRAC University</strong> · Dhaka, Bangladesh
+                      </p>
+
+                      <p class="education-department">
+                        Department of Computer Science and Engineering
+                      </p>
+
+                      <div class="education-footer">
+                        <span>🎓 Graduating 2026</span>
+                        <span class="expected-badge">CGPA 3.54 / 4.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- HSC -->
+                  <div class="education-item">
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+                      <div class="education-card-top">
+                        <div>
+                          <span class="education-level">HIGHER SECONDARY</span>
+                          <h4>Higher Secondary School Certificate (HSC)</h4>
+                        </div>
+
+                        <div class="education-result">
+                          <span class="result-label">GPA</span>
+                          <strong>5.00</strong>
+                          <small>/ 5.00</small>
+                        </div>
+                      </div>
+
+                      <p class="education-institution">
+                        <strong>Kushtia Government College</strong> · Kushtia, Bangladesh
+                      </p>
+
+                      <div class="education-footer">
+                        <span>📅 December 2021</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SSC -->
+                  <div class="education-item">
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+                      <div class="education-card-top">
+                        <div>
+                          <span class="education-level">SECONDARY</span>
+                          <h4>Secondary School Certificate (SSC)</h4>
+                        </div>
+
+                        <div class="education-result">
+                          <span class="result-label">GPA</span>
+                          <strong>5.00</strong>
+                          <small>/ 5.00</small>
+                        </div>
+                      </div>
+
+                      <p class="education-institution">
+                        <strong>Kushtia Zilla School</strong> · Kushtia, Bangladesh
+                      </p>
+
+                      <div class="education-footer">
+                        <span>📅 February 2019</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="repo-meta">
+                <span class="lang-tag">
+                  <span class="lang-color markdown"></span>Markdown
+                </span>
+                <span class="lang-tag">
+                  <span class="lang-color javascript"></span>TypeScript
+                </span>
+                <span>★ Academic Overview</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">projects / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <div class="project-showcase">
+                  <article class="project-entry project-entry--thesis">
+                    <div class="project-entry__top"><span class="project-index">01 / Thesis</span><span class="project-status">In progress</span></div>
+                    <h4>Adversarial Robustness in<br />Bangla Sentiment Analysis</h4>
+                    <p>Evaluating and improving model robustness against linguistically motivated Bangla perturbations through a human-validated taxonomy.</p>
+                    <div class="project-proof"><span><strong>46K+</strong> annotated samples</span><span><strong>15</strong> ML, transformer &amp; LLM models</span></div>
+                    <div class="project-tags"><span>Python</span><span>PyTorch</span><span>Hugging Face</span></div>
+                    <a class="project-link" href="https://github.com/realrafiahamed" target="_blank" rel="noreferrer">View research <span>↗</span></a>
+                  </article>
+                  <div class="project-grid">
+                    <article class="project-entry">
+                      <span class="project-index">02 / Full stack</span><h4>Bus Ticket Booking System</h4>
+                      <p>Authentication, route search, seat selection, and booking workflows for a complete travel platform.</p>
+                      <div class="project-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+                      <a class="project-link" href="https://github.com/realrafiahamed/CSE391_Bus_Ticket_Booking_Laravel_Full_Project" target="_blank" rel="noreferrer">View project <span>↗</span></a>
+                    </article>
+                    <article class="project-entry">
+                      <span class="project-index">03 / Systems</span><h4>Process Management Simulator</h4>
+                      <p>Linux process creation, synchronization, zombie handling, monitoring, and termination.</p>
+                      <div class="project-tags"><span>C</span><span>POSIX Threads</span><span>Linux</span></div>
+                      <a class="project-link" href="https://github.com/realrafiahamed/CSE321_Operating_Systems_Project" target="_blank" rel="noreferrer">View project <span>↗</span></a>
+                    </article>
+                    <article class="project-entry">
+                      <span class="project-index">04 / Compiler</span><h4>C-Subset Compiler</h4>
+                      <p>A compiler from scratch with lexical and syntax analysis, error handling, and semantic checks.</p>
+                      <div class="project-tags"><span>Flex</span><span>Bison</span><span>C/C++</span></div>
+                      <a class="project-link" href="https://github.com/realrafiahamed/CSE420_Compiler-Design_Assignment" target="_blank" rel="noreferrer">View project <span>↗</span></a>
+                    </article>
+                    <article class="project-entry project-entry--compact">
+                      <span class="project-index">More selected work</span>
+                      <p>Lost &amp; Found Portal · Ball Run 3D · Obesity Prediction ML · Smart Healthcare Network · Mechanic Workshop System</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Python</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>Full-stack &amp; systems</span>
+                <span>★ Selected work</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Honors Section -->
+          <section id="honors" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">technical-focus / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+              
+                <div class="focus-grid">
+                  <article class="focus-card"><span>01</span><h4>Full-stack systems</h4><p>PHP, Laravel, MySQL, authentication, booking flows, and practical admin workflows.</p></article>
+                  <article class="focus-card"><span>02</span><h4>AI / ML &amp; Bangla NLP</h4><p>PyTorch, Hugging Face, Scikit-learn, transformers, data analysis, and robustness evaluation.</p></article>
+                  <article class="focus-card"><span>03</span><h4>Systems &amp; networks</h4><p>C/C++, POSIX threads, compiler construction, process simulation, and Cisco network design.</p></article>
+                </div>
+                <div class="skill-board">
+                  <div><span>Languages</span><p>Python · C · C++ · JavaScript · PHP</p></div>
+                  <div><span>Frameworks &amp; data</span><p>Laravel · PyTorch · Hugging Face · Scikit-learn · MySQL</p></div>
+                  <div><span>Engineering tools</span><p>Git · GitHub · Postman · Cisco Packet Tracer · Linux</p></div>
+                </div>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Applied CS</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>Continuous learning</span>
+                <span>★ Engineering focus</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="content-section">
+            <div class="repo-card hero-about-card">
+              <div class="repo-header">
+                <svg class="repo-icon" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <span class="repo-name">contact / Rafi_Ahamed</span>
+                <span class="badge">Public README</span>
+              </div>
+              <div class="about-readme-body">
+                <div class="contact-hero">
+                  <p>Reach out for software engineering opportunities, research collaboration, or a thoughtful technical conversation.</p>
+                </div>
+                <div class="contact-grid">
+                  <a class="contact-channel contact-channel--primary" href="mailto:rafiahamed2021@gmail.com"><span>Email</span><strong>rafiahamed2021@gmail.com</strong><i>↗</i></a>
+                  <a class="contact-channel" href="mailto:rafi.ahamed1@g.bracu.ac.bd"><span>University email</span><strong>rafi.ahamed1@g.bracu.ac.bd</strong><i>↗</i></a>
+                  <a class="contact-channel" href="tel:+8801714767113"><span>Phone</span><strong>+880 1714 767113</strong><i>↗</i></a>
+                  <a class="contact-channel" href="https://realrafiahamed.github.io" target="_blank" rel="noreferrer"><span>Website</span><strong>realrafiahamed.github.io</strong><i>↗</i></a>
+                  <a class="contact-channel" href="https://github.com/realrafiahamed" target="_blank" rel="noreferrer"><span>GitHub</span><strong>@realrafiahamed</strong><i>↗</i></a>
+                  <a class="contact-channel" href="https://linkedin.com/in/rafiahamed" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>/in/rafiahamed</strong><i>↗</i></a>
+                </div>
+                <p class="contact-location">Based in Middle Badda, Dhaka 1212, Bangladesh.</p>
+              </div>
+              <div class="repo-meta">
+                <span class="lang-tag"><span class="lang-color markdown"></span>Dhaka, Bangladesh</span>
+                <span class="lang-tag"><span class="lang-color javascript"></span>Available to connect</span>
+                <span>★ Let’s talk</span>
+              </div>
+            </div>
+          </section>
+          <footer class="site-footer">
+            <div class="footer-inner">
+              <p class="footer-copy">
+                © Copyright 2026. Personal Portfolio of <strong> Rafi Ahamed</strong>.
+              </p>
+              <p class="footer-note">
+                All rights reserved.
+                Designed & Developed by <strong>Rafi Ahamed</strong>.
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div> <!-- closes .layout-container -->
+    </div> <!-- closes .site-shell -->
+    <script src="script.js"></script>
+  </body>
+</html>
