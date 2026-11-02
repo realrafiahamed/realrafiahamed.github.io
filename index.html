@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rafi Ahamed — Computer Science Graduate (Distinction) from BRAC University & Software Engineer specializing in Full-Stack Web Architecture, AI/ML & Bangla NLP, and Systems Programming."
+    />
+    <title>Rafi Ahamed — Software Engineer &amp; CS Researcher</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%23111318' stroke='%23e4e7ec' stroke-width='2.5' stroke-opacity='0.32'/%3E%3Ctext x='29' y='45' text-anchor='middle' fill='%23f4f5f7' font-family='Inter, -apple-system, BlinkMacSystemFont, sans-serif' font-size='36' font-weight='800' letter-spacing='-1.5'%3ER%3C/text%3E%3Ccircle cx='47.5' cy='41.5' r='3.6' fill='%23a1a9b8'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-loading light">
+    <script>
+      (function () {
+        var saved = null;
+        try {
+          saved = window.localStorage.getItem('rafi-theme');
+        } catch (e) {}
+        var theme = saved ? saved : 'light';
+        document.body.classList.toggle('light', theme === 'light');
+      })();
+    </script>
+
+    <!-- Subtle Top Architectural Dot Matrix -->
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <!-- Top Hairline Scroll Progress -->
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <!-- Signature Loader (Pure Black Screen & Solid Bold White Signature) -->
+    <div class="site-loader" aria-hidden="true">
+      <svg class="site-loader__signature" viewBox="0 0 510 190" role="presentation">
+        <text x="28" y="142">Rafi</text>
+      </svg>
+    </div>
+
+    <!-- Fixed Glassmorphic Top Navigation Bar with Subtle Gradient Transition Below -->
+    <header class="top-nav" id="top-nav">
+      <div class="top-nav__inner">
+        <a class="brand-logo" href="#about" aria-label="Rafi Ahamed Homepage">
+          <span class="logo-text">Rafi</span><span class="logo-dot">.</span>
+          <span class="logo-tag">CS &rsquo;26</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary section navigation">
+          <a href="#about" class="nav-item active" data-tab="about">Overview</a>
+          <a href="#education" class="nav-item" data-tab="education">Education</a>
+          <a href="#research" class="nav-item" data-tab="research">Research</a>
+          <a href="#projects" class="nav-item" data-tab="projects">Project</a>
+          <a href="#skills" class="nav-item" data-tab="skills">Skills</a>
+          <a href="#honors" class="nav-item" data-tab="honors">Hons</a>
+          <a href="#leadership" class="nav-item" data-tab="leadership">Leadership</a>
+          <a href="#contact" class="nav-item" data-tab="contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span><span></span>
+            <span class="sr-only">Toggle navigation menu</span>
+          </button>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch theme"
+            aria-pressed="true"
+          >
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Collapsible Navigation Drawer (High-Contrast Glass Readability) -->
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="#about" class="active" data-tab="about">Overview</a>
+        <a href="#education" data-tab="education">Education</a>
+        <a href="#research" data-tab="research">Research</a>
+        <a href="#projects" data-tab="projects">Project</a>
+        <a href="#skills" data-tab="skills">Skills</a>
+        <a href="#honors" data-tab="honors">Hons</a>
+        <a href="#leadership" data-tab="leadership">Leadership</a>
+        <a href="#contact" data-tab="contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Upper-Right Vertical Rounded Glass Navigation Rail -->
+    <aside class="floating-dock-wrap" aria-label="Vertical quick navigation">
+      <div class="floating-dock">
+        <a href="#about" class="dock-item active" data-tab="about" data-tooltip="Overview" aria-label="Overview">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </a>
+        <a href="#education" class="dock-item" data-tab="education" data-tooltip="Education" aria-label="Education">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+          </svg>
+        </a>
+        <a href="#research" class="dock-item" data-tab="research" data-tooltip="Research" aria-label="Research">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+        </a>
+        <a href="#projects" class="dock-item" data-tab="projects" data-tooltip="Project" aria-label="Project">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+        </a>
+        <a href="#skills" class="dock-item" data-tab="skills" data-tooltip="Skills" aria-label="Skills">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+        </a>
+        <a href="#honors" class="dock-item" data-tab="honors" data-tooltip="Hons" aria-label="Hons">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+        </a>
+        <a href="#leadership" class="dock-item" data-tab="leadership" data-tooltip="Leadership" aria-label="Leadership">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </a>
+        <a href="#contact" class="dock-item" data-tab="contact" data-tooltip="Contact" aria-label="Contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Asymmetric Two-Column Shell -->
+    <div class="site-shell" id="portfolio-shell">
+      <div class="layout-container" id="portfolio-layout">
+        <!-- Left Permanently Fixed Profile Sidebar -->
+        <aside class="profile-sidebar" aria-label="Profile overview">
+          <div class="profile-sidebar__body">
+            <div class="sidebar-top-row">
+              <div class="avatar-wrap">
+                <img
+                  class="avatar"
+                  src="rafi.jpg"
+                  alt="Portrait of Rafi Ahamed"
+                />
+                <span class="online-dot" title="Available for opportunities" aria-label="Available for opportunities"></span>
+              </div>
+
+              <div class="sidebar-top-meta">
+                <div class="availability-pill">
+                  <span class="availability-pill__dot" aria-hidden="true"></span>
+                  <span>Open to Roles</span>
+                </div>
+                <div class="profile-names">
+                  <h1 id="page-title">
+                    Rafi Ahamed
+                    <span class="verified" title="Verified graduate profile" aria-label="Verified graduate profile">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="m12 2.4 2.1 1.45 2.55-.13 1.35 2.17 2.2 1.3-.15 2.55L21.6 12l-1.45 2.1.13 2.55-2.17 1.35-1.3 2.2-2.55-.15L12 21.6l-2.1-1.45-2.55.13L6 18.1l-2.2-1.3.15-2.55L2.4 12l1.45-2.1-.13-2.55L6 6l1.3-2.2 2.55.15L12 2.4Z"
+                        />
+                        <path class="check" d="m8.55 12.08 2.15 2.15 4.75-4.75" />
+                      </svg>
+                    </span>
+                  </h1>
+                  <p class="role">Software Engineer &amp; CS Graduate</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Requirement 8: Updated Biography -->
+            <p class="bio">
+              Computer Science graduate from <strong>BRAC University</strong> with experience in building full-stack web platforms, low-level systems tools, and adversarial NLP research in Bangla.
+            </p>
+
+            <!-- Requirement 18: Bold Separator Below Bio + Two Separate Email Lines Replacing Tech Stack -->
+            <div class="meta-info">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                <span>B.Sc. in CS · <strong>BRAC University</strong> (Distinction)</span>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>
+                  Middle Badda, <strong>Dhaka, Bangladesh</strong>
+                  <svg
+                    class="flag-icon"
+                    viewBox="0 0 640 480"
+                    width="18"
+                    height="13"
+                    aria-label="Bangladesh Flag"
+                  >
+                    <rect width="640" height="480" fill="#006a4e" />
+                    <circle cx="280" cy="240" r="160" fill="#f42a41" />
+                  </svg>
+                </span>
+              </div>
+              <div class="meta-item meta-item--email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <a
+                  class="sidebar-email-link"
+                  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rafiahamed2021@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Compose email in Gmail to rafiahamed2021@gmail.com"
+                >rafiahamed2021@gmail.com</a>
+              </div>
+              <div class="meta-item meta-item--email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <a
+                  class="sidebar-email-link"
+                  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rafi.ahamed1@g.bracu.ac.bd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Compose email in Gmail to rafi.ahamed1@g.bracu.ac.bd"
+                >rafi.ahamed1@g.bracu.ac.bd</a>
+              </div>
+            </div>
+
+            <!-- Action Buttons: 1. Inspect Full CV, 2. Copy Email, 3. Telegram, GitHub, LinkedIn -->
+            <div class="actions">
+              <div class="primary-actions-stack">
+                <button
+                  type="button"
+                  class="resume-button"
+                  data-action="open-cv"
+                  aria-label="Inspect full Curriculum Vitae"
+                >
+                  <span>Inspect Full CV</span>
+                  <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="cv-preview-btn"
+                  data-copy-email="rafiahamed2021@gmail.com"
+                  data-copy-label="email"
+                  aria-label="Copy primary email address"
+                >
+                  Copy Email Address
+                </button>
+              </div>
+
+              <!-- Requirement 7: Telegram Icon Replacing Extra Email Button -->
+              <div class="icon-group">
+                <a
+                  class="icon-button"
+                  href="https://t.me/realrafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Telegram (@realrafiahamed)"
+                  aria-label="Open Telegram profile"
+                >
+                  <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M21.94 4.66a1.5 1.5 0 0 0-1.64-.32L2.83 11.4a1.15 1.15 0 0 0 .06 2.16l4.48 1.55 1.73 5.32a1 1 0 0 0 1.69.37l2.58-2.66 4.64 3.42a1.42 1.42 0 0 0 2.22-.86l2.14-14.6a1.5 1.5 0 0 0-.43-1.44ZM9.36 14.64l8.42-5.3c.16-.1.32.11.18.24l-6.95 6.36-.34 3.32-1.31-4.62Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="icon-button"
+                  href="https://github.com/realrafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub (@realrafiahamed)"
+                  aria-label="Open GitHub profile"
+                >
+                  <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2.2A9.8 9.8 0 0 0 8.9 21.3c.49.09.67-.21.67-.47v-1.82c-2.76.6-3.34-1.17-3.34-1.17-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.32 1.08 2.89.83.09-.64.35-1.08.63-1.33-2.2-.25-4.52-1.1-4.52-4.9 0-1.08.38-1.96 1.02-2.65-.1-.25-.44-1.26.1-2.63 0 0 .83-.27 2.7 1.01a9.4 9.4 0 0 1 4.92 0c1.88-1.28 2.7-1.01 2.7-1.01.54 1.37.2 2.38.1 2.63.63.69 1.02 1.57 1.02 2.65 0 3.81-2.32 4.65-4.53 4.9.36.31.67.9.67 1.81v2.69c0 .26.18.57.68.47A9.8 9.8 0 0 0 12 2.2Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="icon-button"
+                  href="https://linkedin.com/in/rafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn (/in/rafiahamed)"
+                  aria-label="Open LinkedIn profile"
+                >
+                  <svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20.45 20.45H16.9v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.35 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.57V9h3.56v11.45Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Editorial Content Stream -->
+        <main class="main-content" id="portfolio-main">
+          <!-- ================================================================
+               01 / OVERVIEW (#about)
+               ================================================================ -->
+          <section id="about" class="content-section tab-active is-inview">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">01 / Overview</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">profile.readme</span>
+              </div>
+            </div>
+
+            <div class="editorial-readme">
+              <div class="repo-breadcrumb">
+                <span class="repo-breadcrumb__path">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+                    <path d="M6 6h10M6 10h10" />
+                  </svg>
+                  <span>realrafiahamed / <strong>README.md</strong></span>
+                </span>
+                <span class="repo-breadcrumb__badge">B.Sc. CS · Distinction</span>
+              </div>
+
+              <h2 class="editorial-lead">
+                Engineering full-stack web applications, low-level systems tools, and empirically validated Bangla NLP models.
+              </h2>
+
+              <div class="editorial-prose">
+                <p>
+                  I am a Computer Science graduate from <strong>BRAC University</strong> (September 2026, <strong>CGPA 3.51 / 4.00</strong>, Graduated with Distinction). My work spans full-stack software development with <strong>PHP, Laravel, and MySQL</strong>, machine learning and natural language processing with <strong>Python and PyTorch</strong>, and core systems engineering in <strong>C, C++, and Linux</strong>.
+                </p>
+                <p>
+                  Whether designing a multi-route ticket reservation architecture, writing a subset-C compiler from lexical analysis through semantic verification, or evaluating 15 transformer and LLM architectures against 46,000+ adversarial Bangla samples, I focus on clean abstractions, verifiable correctness, and software that holds up under real-world edge cases.
+                </p>
+              </div>
+
+              <div class="architectural-pillars">
+                <div class="pillar-item">
+                  <span class="pillar-item__num">PILLAR 01</span>
+                  <h3>Full-Stack Web Systems</h3>
+                  <p>
+                    Relational schema design, role-based authentication, booking workflows, and administrative dashboards built with PHP, Laravel, MySQL, and JavaScript.
+                  </p>
+                </div>
+                <div class="pillar-item">
+                  <span class="pillar-item__num">PILLAR 02</span>
+                  <h3>AI / ML &amp; Bangla NLP</h3>
+                  <p>
+                    Adversarial robustness evaluation, large-scale corpus annotation, feature engineering, PCA/K-Means clustering, and transformer benchmarking in PyTorch.
+                  </p>
+                </div>
+                <div class="pillar-item">
+                  <span class="pillar-item__num">PILLAR 03</span>
+                  <h3>Systems, Compilers &amp; Networks</h3>
+                  <p>
+                    Linux process simulation with POSIX threads, Flex/Bison compiler pipelines, RISC-V assembly, and multi-unit VLSM/RIPv2 network topologies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               02 / EDUCATION (#education) — Requirements 4, 5 & 21
+               ================================================================ -->
+          <section id="education" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">02 / Education</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">2019 – 2026</span>
+              </div>
+              <h2 class="section-title">Education &amp; Academic Qualifications</h2>
+              <p class="section-subtitle">
+                Consistent academic distinction from secondary and higher-secondary board examinations through undergraduate Computer Science at BRAC University.
+              </p>
+            </div>
+
+            <div class="education-timeline">
+              <!-- BSc with Noticeably Enlarged Official BRAC University Logo Between Degree Title & CGPA -->
+              <article class="education-item">
+                <div class="education-dot" aria-hidden="true"></div>
+                <div class="education-card">
+                  <div class="education-card-top education-card-top--with-logo">
+                    <div class="education-degree-info">
+                      <span class="education-level">UNDERGRADUATE DEGREE · DHAKA, BANGLADESH</span>
+                      <h3>Bachelor of Science (B.Sc.) in Computer Science</h3>
+                      <p class="education-institution"><strong>BRAC University</strong></p>
+                      <p class="education-department">Department of Computer Science and Engineering (CSE)</p>
+                    </div>
+
+                    <div class="education-right-group">
+                      <div class="edu-logo-badge" title="BRAC University">
+                        <img
+                          src="bracu_logo.png"
+                          alt="BRAC University official logo"
+                          class="edu-logo-img"
+                        />
+                      </div>
+                      <div class="education-result">
+                        <span class="result-label">CGPA</span>
+                        <strong>3.51</strong>
+                        <small>/ 4.00</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="education-footer">
+                    <span>September 2022 – September 2026</span>
+                    <span class="distinction-badge">Graduated with Distinction</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- HSC (Requirement 5: Removed Maximum Board Distinction text) -->
+              <article class="education-item">
+                <div class="education-dot" aria-hidden="true"></div>
+                <div class="education-card">
+                  <div class="education-card-top">
+                    <div class="education-degree-info">
+                      <span class="education-level">HIGHER SECONDARY · KUSHTIA, BANGLADESH</span>
+                      <h3>Higher Secondary School Certificate (HSC)</h3>
+                      <p class="education-institution"><strong>Kushtia Government College</strong></p>
+                    </div>
+                    <div class="education-result">
+                      <span class="result-label">GPA</span>
+                      <strong>5.00</strong>
+                      <small>/ 5.00</small>
+                    </div>
+                  </div>
+                  <div class="education-footer">
+                    <span>Completed December 2021</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- SSC -->
+              <article class="education-item">
+                <div class="education-dot" aria-hidden="true"></div>
+                <div class="education-card">
+                  <div class="education-card-top">
+                    <div class="education-degree-info">
+                      <span class="education-level">SECONDARY · KUSHTIA, BANGLADESH</span>
+                      <h3>Secondary School Certificate (SSC)</h3>
+                      <p class="education-institution"><strong>Kushtia Zilla School</strong></p>
+                    </div>
+                    <div class="education-result">
+                      <span class="result-label">GPA</span>
+                      <strong>5.00</strong>
+                      <small>/ 5.00</small>
+                    </div>
+                  </div>
+                  <div class="education-footer">
+                    <span>Completed February 2019</span>
+                    <span>SSC General Scholarship Recipient</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               03 / RESEARCH (#research)
+               ================================================================ -->
+          <section id="research" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">03 / Research</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">Summer 2025 – Spring 2026</span>
+              </div>
+              <h2 class="section-title">Adversarial Robustness in Bangla Sentiment Analysis</h2>
+              <p class="section-subtitle">
+                Undergraduate thesis investigating how state-of-the-art classical ML, Transformer, and Large Language Models behave under linguistically motivated Bangla perturbations.
+              </p>
+            </div>
+
+            <article class="thesis-spotlight">
+              <div class="thesis-spotlight__meta">
+                <span class="thesis-eyebrow">Undergraduate Thesis · BRAC University</span>
+                <span class="thesis-period">Summer 2025 – Spring 2026</span>
+              </div>
+
+              <h3 class="thesis-title">
+                Evaluating and Improving Adversarial Robustness in Bangla Sentiment Analysis: A Cross-Architecture Study with Human-Validated Perturbation Taxonomy
+              </h3>
+
+              <p class="thesis-summary">
+                Standard sentiment benchmarks overestimate model reliability on morphologically rich, low-resource languages. This study constructs a rigorous, human-validated perturbation taxonomy for Bangla to systematically stress-test and improve cross-architecture model resilience.
+              </p>
+
+              <div class="thesis-metrics">
+                <div class="thesis-metric">
+                  <strong>46,000+</strong>
+                  <span>Annotated Bangla evaluation samples curated &amp; verified</span>
+                </div>
+                <div class="thesis-metric">
+                  <strong>15 Models</strong>
+                  <span>Classical ML, Transformer &amp; LLM architectures benchmarked</span>
+                </div>
+                <div class="thesis-metric">
+                  <strong>Taxonomy</strong>
+                  <span>Human-validated linguistic perturbation framework</span>
+                </div>
+              </div>
+
+              <ul class="thesis-contributions">
+                <li>
+                  <strong>Linguistic Perturbation Analysis:</strong> Investigated the vulnerability of Bangla sentiment classifiers against character-level, phonetic, orthographic, and semantic adversarial variations.
+                </li>
+                <li>
+                  <strong>Corpus Construction &amp; Taxonomy Design:</strong> Built and annotated a <strong>46,000+ sample dataset</strong> alongside a structured, human-validated perturbation taxonomy tailored to real-world Bangla text.
+                </li>
+                <li>
+                  <strong>Cross-Architecture Empirical Evaluation:</strong> Benchmarked <strong>15 distinct ML, Transformer, and LLM models</strong> using Python, PyTorch, and Hugging Face Transformers under controlled adversarial stress tests.
+                </li>
+              </ul>
+
+              <div class="thesis-footer">
+                <div class="tech-inline-list">
+                  <span>Python</span>
+                  <span>PyTorch</span>
+                  <span>Hugging Face Transformers</span>
+                  <span>Bangla NLP</span>
+                  <span>Adversarial Evaluation</span>
+                </div>
+                <a
+                  class="editorial-link"
+                  href="https://github.com/realrafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Inspect Research on GitHub</span>
+                  <span class="arrow-glyph">↗</span>
+                </a>
+              </div>
+            </article>
+          </section>
+
+          <!-- ================================================================
+               04 / PROJECT (#projects)
+               ================================================================ -->
+          <section id="projects" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">04 / Project</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">08 Verified Repositories</span>
+              </div>
+              <h2 class="section-title">Selected Systems &amp; Full-Stack Work</h2>
+              <p class="section-subtitle">
+                Production-minded academic and systems projects spanning full-stack web platforms, operating system internals, compiler construction, machine learning, and network engineering.
+              </p>
+            </div>
+
+            <!-- Interactive Domain Filter Toolbar -->
+            <div class="project-toolbar">
+              <div class="filter-group" role="tablist" aria-label="Filter projects by domain">
+                <button type="button" class="filter-btn active" data-filter="all">All Work (8)</button>
+                <button type="button" class="filter-btn" data-filter="fullstack">Full-Stack Web (3)</button>
+                <button type="button" class="filter-btn" data-filter="systems">Systems, Compilers &amp; Net (3)</button>
+                <button type="button" class="filter-btn" data-filter="aiml">AI/ML &amp; 3D Graphics (2)</button>
+              </div>
+              <span class="project-count-label" id="project-count-label">Showing 8 of 8 repositories</span>
+            </div>
+
+            <!-- Flagship Bento Grid (Top 3 Deep-Dive Projects) -->
+            <div class="flagship-grid">
+              <!-- Flagship 01: Bus Ticket Booking System -->
+              <article class="project-entry project-entry--wide" data-category="fullstack">
+                <div>
+                  <div class="project-entry__meta">
+                    <span>01 / FULL-STACK PLATFORM</span>
+                    <span>FALL 2025</span>
+                  </div>
+                  <h3>Bus Ticket Booking System</h3>
+                  <p>
+                    End-to-end intercity bus reservation platform engineered with Laravel and MySQL. Implements multi-role authentication, user profile management, dynamic route and schedule discovery, interactive seat-map concurrency handling, and reservation lifecycle management.
+                  </p>
+                  <div class="tech-inline-list" style="margin-bottom: 16px;">
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>MVC Architecture</span>
+                    <span>Authentication</span>
+                  </div>
+                  <div class="project-entry__footer">
+                    <span class="section-meta-tag">CSE391 · Programming for the Internet</span>
+                    <a
+                      class="project-link"
+                      href="https://github.com/realrafiahamed/CSE391_Bus_Ticket_Booking_Laravel_Full_Project"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Source Repository <span>↗</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="architecture-callout">
+                  <span class="architecture-callout__title">System Workflow &amp; Modules</span>
+                  <div class="architecture-steps">
+                    <div>
+                      <span>01. Auth &amp; Session Guard</span>
+                      <strong>Role-Based Access</strong>
+                    </div>
+                    <div>
+                      <span>02. Route &amp; Schedule Engine</span>
+                      <strong>Dynamic Querying</strong>
+                    </div>
+                    <div>
+                      <span>03. Interactive Seat Matrix</span>
+                      <strong>State Validation</strong>
+                    </div>
+                    <div>
+                      <span>04. Ticket &amp; Ledger</span>
+                      <strong>MySQL Transactions</strong>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Flagship 02: Linux Process Management Simulator -->
+              <article class="project-entry" data-category="systems">
+                <div>
+                  <div class="project-entry__meta">
+                    <span>02 / OPERATING SYSTEMS</span>
+                    <span>SPRING 2026</span>
+                  </div>
+                  <h3>Linux Process Management Simulator</h3>
+                  <p>
+                    Low-level systems simulator written in C on Linux implementing process creation hierarchy, POSIX thread synchronization, zombie/orphan process reaping, real-time state monitoring, and controlled signal termination.
+                  </p>
+                  <div class="tech-inline-list" style="margin-bottom: 16px;">
+                    <span>C</span>
+                    <span>POSIX Threads</span>
+                    <span>Linux System Calls</span>
+                    <span>Process Sync</span>
+                  </div>
+                </div>
+                <div class="project-entry__footer">
+                  <span class="section-meta-tag">CSE321 · Operating Systems</span>
+                  <a
+                    class="project-link"
+                    href="https://github.com/realrafiahamed/CSE321_Operating_Systems_Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source Repository <span>↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Flagship 03: Subset-C Compiler -->
+              <article class="project-entry" data-category="systems">
+                <div>
+                  <div class="project-entry__meta">
+                    <span>03 / COMPILER DESIGN</span>
+                    <span>SUMMER 2026</span>
+                  </div>
+                  <h3>Subset-C Compiler Architecture</h3>
+                  <p>
+                    Multi-phase compiler for a subset of C built from scratch using Flex and Bison. Implements lexical tokenization, context-free grammar parsing, symbol table scoping, syntax tree construction, semantic type checking, and diagnostic error reporting.
+                  </p>
+                  <div class="tech-inline-list" style="margin-bottom: 16px;">
+                    <span>Flex</span>
+                    <span>Bison</span>
+                    <span>C / C++</span>
+                    <span>AST &amp; Symbol Table</span>
+                  </div>
+                </div>
+                <div class="project-entry__footer">
+                  <span class="section-meta-tag">CSE420 · Compiler Design</span>
+                  <a
+                    class="project-link"
+                    href="https://github.com/realrafiahamed/CSE420_Compiler-Design_Assignment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source Repository <span>↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Remaining 5 Projects: Specification Ledger -->
+            <div class="archive-ledger" role="region" aria-label="Additional engineering projects">
+              <div class="archive-ledger__header">
+                <span>Index &amp; Project Specification</span>
+                <span>Stack · Term · Repository</span>
+              </div>
+
+              <!-- 04: Obesity Prediction Using ML -->
+              <article class="archive-row" data-category="aiml">
+                <span class="archive-row__idx">04</span>
+                <div class="archive-row__main">
+                  <h4>Obesity Prediction &amp; Clustering Analysis</h4>
+                  <p>
+                    End-to-end ML pipeline with EDA, feature encoding, Logistic Regression, Decision Tree, and MLP classifiers evaluated via ROC-AUC, paired with PCA and K-Means analysis.
+                  </p>
+                </div>
+                <span class="archive-row__stack">Python · Scikit-learn · PCA · K-Means</span>
+                <span class="archive-row__date">Summer 2025</span>
+                <a
+                  class="archive-row__link"
+                  href="https://github.com/realrafiahamed/CSE422_Obesity_Prediction_Using_ML_Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span>↗</span>
+                </a>
+              </article>
+
+              <!-- 05: Lost & Found Online Portal -->
+              <article class="archive-row" data-category="fullstack">
+                <span class="archive-row__idx">05</span>
+                <div class="archive-row__main">
+                  <h4>Lost &amp; Found Online Portal</h4>
+                  <p>
+                    Dedicated campus web portal enabling BRAC University students to publish, search, filter, and manage lost-and-found item listings and connect with item claimants.
+                  </p>
+                </div>
+                <span class="archive-row__stack">Core PHP · MySQL · Relational DB</span>
+                <span class="archive-row__date">Spring 2025</span>
+                <a
+                  class="archive-row__link"
+                  href="https://github.com/realrafiahamed/CSE370_Lost_and_Found_Online_Portal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span>↗</span>
+                </a>
+              </article>
+
+              <!-- 06: Mechanic Workshop Management System -->
+              <article class="archive-row" data-category="fullstack">
+                <span class="archive-row__idx">06</span>
+                <div class="archive-row__main">
+                  <h4>Mechanic Workshop Management System</h4>
+                  <p>
+                    Appointment scheduling system allowing clients to book mechanics based on real-time slot availability, featuring an admin panel for rescheduling and mechanic assignment.
+                  </p>
+                </div>
+                <span class="archive-row__stack">PHP · MySQL · Admin Workflows</span>
+                <span class="archive-row__date">Spring 2026</span>
+                <a
+                  class="archive-row__link"
+                  href="https://github.com/realrafiahamed/Mechanic_Workshop_Management_System"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span>↗</span>
+                </a>
+              </article>
+
+              <!-- 07: Smart Healthcare Network (Computer Networks) -->
+              <article class="archive-row" data-category="systems">
+                <span class="archive-row__idx">07</span>
+                <div class="archive-row__main">
+                  <h4>Smart Healthcare Network Topology</h4>
+                  <p>
+                    Multi-unit hospital network architecture engineered with VLSM subnetting, DHCP, DNS, dedicated web and email servers, and hybrid static &amp; RIPv2 routing across medical departments.
+                  </p>
+                </div>
+                <span class="archive-row__stack">Cisco Packet Tracer · VLSM · RIPv2</span>
+                <span class="archive-row__date">Spring 2026</span>
+                <a
+                  class="archive-row__link"
+                  href="https://github.com/realrafiahamed/CSE421_Computer_Networks_Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span>↗</span>
+                </a>
+              </article>
+
+              <!-- 08: Ball Run 3D Game -->
+              <article class="archive-row" data-category="aiml">
+                <span class="archive-row__idx">08</span>
+                <div class="archive-row__main">
+                  <h4>Ball Run 3D Interactive Game</h4>
+                  <p>
+                    3D obstacle-avoidance game featuring real-time collision detection, jumping physics, progressive velocity scaling, bonus scoring, cheat mode, and responsive keyboard controls.
+                  </p>
+                </div>
+                <span class="archive-row__stack">Python · PyOpenGL · 3D Graphics</span>
+                <span class="archive-row__date">Summer 2025</span>
+                <a
+                  class="archive-row__link"
+                  href="https://github.com/realrafiahamed/CSE423_Ball_Run_3D_Game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span>↗</span>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               05 / SKILLS (#skills)
+               ================================================================ -->
+          <section id="skills" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">05 / Skills</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">Capabilities &amp; Tooling</span>
+              </div>
+              <h2 class="section-title">Technical Architecture &amp; Core Competencies</h2>
+              <p class="section-subtitle">
+                Organized by engineering layer—avoiding decorative badge clutter in favor of clear domain capabilities verified through academic coursework and thesis research.
+              </p>
+            </div>
+
+            <div class="spec-matrix">
+              <div class="spec-row">
+                <div class="spec-row__category"><span>01</span>Languages</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">Python · C · C++ · PHP · JavaScript · SQL · RISC-V Assembly</div>
+                  <div class="spec-row__context">Used across systems programming, backend web architecture, compiler construction, and ML experimentation.</div>
+                </div>
+              </div>
+
+              <div class="spec-row">
+                <div class="spec-row__category"><span>02</span>Web &amp; Databases</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">Laravel · Core PHP · MySQL · MariaDB · HTML5 · CSS3</div>
+                  <div class="spec-row__context">Full-stack MVC web portals, transactional booking workflows, relational schema design, and role-based admin panels.</div>
+                </div>
+              </div>
+
+              <div class="spec-row">
+                <div class="spec-row__category"><span>03</span>AI / ML &amp; Data</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">PyTorch · Hugging Face Transformers · Scikit-learn · PCA · K-Means · EDA</div>
+                  <div class="spec-row__context">Cross-architecture transformer evaluation, adversarial Bangla NLP perturbation taxonomy, and supervised/unsupervised modeling.</div>
+                </div>
+              </div>
+
+              <div class="spec-row">
+                <div class="spec-row__category"><span>04</span>Systems &amp; Networks</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">Linux · POSIX Threads · Flex · Bison · Cisco Packet Tracer · VLSM · RIPv2</div>
+                  <div class="spec-row__context">Process lifecycle simulation, lexical/syntax/semantic compiler pipelines, and enterprise subnet/routing design.</div>
+                </div>
+              </div>
+
+              <div class="spec-row">
+                <div class="spec-row__category"><span>05</span>Tools &amp; Environment</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">Git · GitHub · Visual Studio Code · Postman · phpMyAdmin · Ubuntu · Windows</div>
+                  <div class="spec-row__context">Version control, API verification, database administration, and cross-platform development workflows.</div>
+                </div>
+              </div>
+
+              <div class="spec-row">
+                <div class="spec-row__category"><span>06</span>Electives &amp; Foundations</div>
+                <div class="spec-row__items">
+                  <div class="spec-row__primary">Programming for the Internet · Data Communications · System Analysis &amp; Design · Gamification</div>
+                  <div class="spec-row__context">Core strengths in technical research, data analysis, structured problem solving, and collaborative engineering.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               06 / HONS (#honors)
+               ================================================================ -->
+          <section id="honors" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">06 / Hons</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">2013 – 2026</span>
+              </div>
+              <h2 class="section-title">Honors, Distinctions &amp; Scholarships</h2>
+              <p class="section-subtitle">
+                Academic merit scholarships and formal recognitions earned across primary, secondary, and university computer science studies.
+              </p>
+            </div>
+
+            <div class="honor-list honor-list--standalone">
+              <article class="honor-item">
+                <span class="honor-item__year">Sep 2026</span>
+                <div class="honor-item__body">
+                  <h4>Graduated with Distinction</h4>
+                  <p>B.Sc. in Computer Science, BRAC University (CGPA 3.51 / 4.00).</p>
+                </div>
+              </article>
+
+              <article class="honor-item">
+                <span class="honor-item__year">May 2023</span>
+                <div class="honor-item__body">
+                  <h4>Advanced Web Development Certificate</h4>
+                  <p>Awarded during the BRAC University Residential Semester for technical excellence.</p>
+                </div>
+              </article>
+
+              <article class="honor-item">
+                <span class="honor-item__year">Sep 2022</span>
+                <div class="honor-item__body">
+                  <h4>Undergraduate Merit Scholarship</h4>
+                  <p>Awarded upon admission to BRAC University based on prior academic results.</p>
+                </div>
+              </article>
+
+              <article class="honor-item">
+                <span class="honor-item__year">2019</span>
+                <div class="honor-item__body">
+                  <h4>SSC General Scholarship</h4>
+                  <p>Board of Intermediate and Secondary Education, Jashore Board.</p>
+                </div>
+              </article>
+
+              <article class="honor-item">
+                <span class="honor-item__year">2013</span>
+                <div class="honor-item__body">
+                  <h4>PSC Talent Pool Scholarship</h4>
+                  <p>Directorate of Primary Education, Ministry of Primary and Mass Education, Jashore Board.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               07 / LEADERSHIP (#leadership)
+               ================================================================ -->
+          <section id="leadership" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">07 / Leadership</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">Team &amp; Campus Roles</span>
+              </div>
+              <h2 class="section-title">Extracurricular Leadership &amp; Campus Organizations</h2>
+              <p class="section-subtitle">
+                Project leadership and organizational roles within BRAC University's engineering and research clubs.
+              </p>
+            </div>
+
+            <div class="leadership-list">
+              <article class="leadership-item is-open">
+                <button type="button" class="leadership-trigger" aria-expanded="true">
+                  <div class="leadership-trigger__left">
+                    <h4>The Kinetic Hub — Gamification Project</h4>
+                    <span>Team Leader · Behavioral Design Initiative</span>
+                  </div>
+                  <div class="leadership-trigger__right">
+                    <span>4-Member Team</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                </button>
+                <div class="leadership-panel">
+                  Led a 4-member engineering team to design a behavioral gamification system aimed at enhancing shopping center visitor engagement. Directed the core system mechanics, behavioral incentive framework, formal presentation, and comprehensive technical report.
+                </div>
+              </article>
+
+              <article class="leadership-item is-open">
+                <button type="button" class="leadership-trigger" aria-expanded="true">
+                  <div class="leadership-trigger__left">
+                    <h4>BRAC University Computer Club (BUCC)</h4>
+                    <span>General Member · Event Management Department</span>
+                  </div>
+                  <div class="leadership-trigger__right">
+                    <span>May 2023 – Sep 2026</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                </button>
+                <div class="leadership-panel">
+                  Supported the planning, logistics, cross-team coordination, and on-ground execution of university-wide computer science workshops, hackathons, and club events across three academic years.
+                </div>
+              </article>
+
+              <article class="leadership-item is-open">
+                <button type="button" class="leadership-trigger" aria-expanded="true">
+                  <div class="leadership-trigger__left">
+                    <h4>Research for Development Club (BUReD)</h4>
+                    <span>General Member · Creative Department</span>
+                  </div>
+                  <div class="leadership-trigger__right">
+                    <span>Jan 2023 – May 2024</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                </button>
+                <div class="leadership-panel">
+                  Participated in research-focused club initiatives and contributed to visual direction and event staging across campus programs and seminars.
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               08 / CONTACT (#contact)
+               ================================================================ -->
+          <section id="contact" class="content-section">
+            <div class="section-header">
+              <div class="section-header__rail">
+                <span class="section-index">08 / Contact</span>
+                <div class="section-rule"></div>
+                <span class="section-meta-tag">Available for Opportunities</span>
+              </div>
+            </div>
+
+            <div class="contact-surface">
+              <div class="contact-top">
+                <div>
+                  <h3>Initiate a Conversation</h3>
+                  <p>
+                    Available for full-stack software engineering roles, systems development, and AI/NLP research collaborations. Reach out directly via Gmail, Telegram, phone, or professional profiles.
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-grid">
+                <a
+                  class="contact-channel"
+                  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rafiahamed2021@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Primary Email (Gmail)</span>
+                  <strong>rafiahamed2021@gmail.com</strong>
+                  <i>↗</i>
+                </a>
+                <a
+                  class="contact-channel"
+                  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rafi.ahamed1@g.bracu.ac.bd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>University Email (Gmail)</span>
+                  <strong>rafi.ahamed1@g.bracu.ac.bd</strong>
+                  <i>↗</i>
+                </a>
+                <a class="contact-channel" href="tel:+8801714767113">
+                  <span>Direct Phone</span>
+                  <strong>+880 1714 767113</strong>
+                  <i>↗</i>
+                </a>
+                <a
+                  class="contact-channel"
+                  href="https://github.com/realrafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>GitHub</span>
+                  <strong>github.com/realrafiahamed</strong>
+                  <i>↗</i>
+                </a>
+                <a
+                  class="contact-channel"
+                  href="https://linkedin.com/in/rafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>LinkedIn</span>
+                  <strong>linkedin.com/in/rafiahamed</strong>
+                  <i>↗</i>
+                </a>
+                <a
+                  class="contact-channel"
+                  href="https://t.me/realrafiahamed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Telegram</span>
+                  <strong>t.me/realrafiahamed</strong>
+                  <i>↗</i>
+                </a>
+              </div>
+
+              <div class="contact-location">
+                <span>Post Office Road, Middle Badda, Dhaka 1212, Bangladesh</span>
+                <span>UTC+06:00 · Standard Bangladesh Time</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Requirement 25: Refined Footer & Copyright Text -->
+          <footer class="site-footer">
+            <div class="footer-inner">
+              <p class="footer-copy">
+                &copy; 2026 <strong>Rafi Ahamed</strong>. All rights reserved.
+              </p>
+              <p class="footer-note">
+                Engineered with semantic HTML &amp; custom monochrome glass design. Powered by Gemini 4 Argon.
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div>
+
+      <!-- Requirement 15: Dedicated Minimalist 404 Page View (Triggered on Unknown Routes) -->
+      <section class="not-found-view" id="not-found-view" aria-labelledby="not-found-heading" hidden>
+        <div class="not-found-card">
+          <span class="not-found-eyebrow">ERROR · ROUTE NOT FOUND</span>
+          <h2 class="not-found-code" id="not-found-heading">404</h2>
+          <p class="not-found-title">Page Not Found</p>
+          <p class="not-found-desc">
+            The page or section you are looking for does not exist or has been relocated.
+          </p>
+          <a href="#about" class="resume-button not-found-btn" data-action="return-home">
+            <span>Back to Home</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Requirement 1: Embedded Actual CV PDF Viewer Modal -->
+    <div
+      class="cv-modal-backdrop"
+      id="cv-modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cv-modal-heading"
+      aria-hidden="true"
+    >
+      <div class="cv-modal cv-modal--pdf">
+        <div class="cv-modal__header">
+          <div class="cv-modal__title" id="cv-modal-heading">
+            <span>CV_Rafi_Ahamed_2026.pdf · Curriculum Vitae</span>
+          </div>
+          <div class="cv-modal__actions">
+            <a
+              href="CV_Rafi_Ahamed_2026.pdf"
+              download="CV_Rafi_Ahamed_2026.pdf"
+              class="cv-preview-btn"
+              id="cv-download-btn"
+            >
+              Download Original PDF
+            </a>
+            <button type="button" class="cv-preview-btn" data-action="print-cv">
+              Print / Save PDF
+            </button>
+            <button
+              type="button"
+              class="cv-modal__close"
+              data-action="close-cv"
+              aria-label="Close CV reader"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div class="cv-modal__body cv-modal__body--pdf">
+          <iframe
+            id="cv-pdf-frame"
+            class="cv-pdf-frame"
+            src="CV_Rafi_Ahamed_2026.pdf#view=FitH"
+            title="Rafi Ahamed Curriculum Vitae PDF"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glassmorphic Toast Notification -->
+    <div id="toast-notification" class="toast-notification" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
